@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProductCatalog>
+<Product id="smartwatch">
+<type>smartwatch</type>
+<name>Smart Watch</name>
+<price>$399.99</price>
+<image>smartwatch.jpg</image>
+<manufacturer>Apple</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="smartwatch1">
+<type>smartwatch</type>
+<name>Smart Watch</name>
+<price>$199.99</price>
+<image>smartwatch1.jpg</image>
+<manufacturer>Titan</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="smartwatch2">
+<type>smartwatch</type>
+<name>Smart Watch</name>
+<price>$299.99</price>
+<image>smartwatch2.jpg</image>
+<manufacturer>Sonata</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="smartwatch3">
+<type>smartwatch</type>
+<name>Smart Watch</name>
+<price>$499.99</price>
+<image>smartwatch3.jpg</image>
+<manufacturer>Rolex</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="smartwatch4">
+<type>smartwatch</type>
+<name>Smart Watch</name>
+<price>$699.99</price>
+<image>smartwatch4.jpg</image>
+<manufacturer>Fasttrack</manufacturer>
+<condition>New</condition>
+<discount>$200.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="smartwatch5">
+<type>smartwatch</type>
+<name>Smart Watch</name>
+<price>$999.99</price>
+<image>smartwatch5.jpg</image>
+<manufacturer>Crown</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="smartwatch6">
+<type>smartwatch</type>
+<name>Smart Watch</name>
+<price>$799.99</price>
+<image>smartwatch6.jpg</image>
+<manufacturer>Tommy</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="speaker7">
+<type>speaker</type>
+<name>Speaker 2.1</name>
+<price>$399.99</price>
+<image>speaker7.jpg</image>
+<manufacturer>Apple</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="speaker1">
+<type>speaker</type>
+<name>Speaker 2.1</name>
+<price>$199.99</price>
+<image>speaker1.jpg</image>
+<manufacturer>Titan</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="speaker2">
+<type>speaker</type>
+<name>Speaker 2.1</name>
+<price>$299.99</price>
+<image>speaker2.jpg</image>
+<manufacturer>Sonata</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="speaker3">
+<type>speaker</type>
+<name>Speaker 2.1</name>
+<price>$499.99</price>
+<image>speaker3.jpg</image>
+<manufacturer>Rolex</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="speaker4">
+<type>speaker</type>
+<name>Speaker 2.1</name>
+<price>$699.99</price>
+<image>speaker4.jpg</image>
+<manufacturer>Fasttrack</manufacturer>
+<condition>New</condition>
+<discount>$200.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="speaker5">
+<type>speaker</type>
+<name>Speaker 2.1</name>
+<price>$999.99</price>
+<image>speaker5.jpg</image>
+<manufacturer>Crown</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="speaker6">
+<type>speaker</type>
+<name>Speaker 2.1</name>
+<price>$799.99</price>
+<image>speaker6.jpg</image>
+<manufacturer>Tommy</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="headphone1">
+<type>headphone</type>
+<name>Head Phones</name>
+<price>$199.99</price>
+<image>headphone1.jpg</image>
+<manufacturer>Titan</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="headphone2">
+<type>headphone</type>
+<name>Head Phones</name>
+<price>$299.99</price>
+<image>headphone2.jpg</image>
+<manufacturer>Sonata</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="headphone3">
+<type>headphone</type>
+<name>Head Phones</name>
+<price>$499.99</price>
+<image>headphone3.jpg</image>
+<manufacturer>Rolex</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="headphone4">
+<type>headphone</type>
+<name>Head Phones</name>
+<price>$699.99</price>
+<image>headphone4.jpg</image>
+<manufacturer>Fasttrack</manufacturer>
+<condition>New</condition>
+<discount>$200.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="headphone5">
+<type>headphone</type>
+<name>Head Phones</name>
+<price>$999.99</price>
+<image>headphone5.jpg</image>
+<manufacturer>Crown</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="headphone6">
+<type>headphone</type>
+<name>Head Phones</name>
+<price>$799.99</price>
+<image>headphone6.jpg</image>
+<manufacturer>Tommy</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="phone1">
+<type>phone</type>
+<name>Smart Phone</name>
+<price>$199.99</price>
+<image>phone1.jpg</image>
+<manufacturer>Titan</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="phone2">
+<type>phone</type>
+<name>Smart Phone</name>
+<price>$299.99</price>
+<image>phone2.jpg</image>
+<manufacturer>Sonata</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="phone3">
+<type>phone</type>
+<name>Smart Phone</name>
+<price>$499.99</price>
+<image>phone3.jpg</image>
+<manufacturer>Rolex</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="phone4">
+<type>phone</type>
+<name>Smart Phone</name>
+<price>$699.99</price>
+<image>phone4.jpg</image>
+<manufacturer>Fasttrack</manufacturer>
+<condition>New</condition>
+<discount>$200.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="phone5">
+<type>phone</type>
+<name>Smart Phone</name>
+<price>$999.99</price>
+<image>phone5.jpg</image>
+<manufacturer>Crown</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="phone6">
+<type>phone</type>
+<name>Smart Phone</name>
+<price>$799.99</price>
+<image>phone6.jpg</image>
+<manufacturer>Tommy</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="laptop1">
+<type>laptop</type>
+<name>Laptop 7th Gen</name>
+<price>$199.99</price>
+<image>laptop1.jpg</image>
+<manufacturer>Titan</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="laptop2">
+<type>laptop</type>
+<name>Laptop 7th Gen</name>
+<price>$299.99</price>
+<image>laptop2.jpg</image>
+<manufacturer>Sonata</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="laptop3">
+<type>laptop</type>
+<name>Laptop 7th Gen</name>
+<price>$499.99</price>
+<image>laptop3.jpg</image>
+<manufacturer>Rolex</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="laptop4">
+<type>laptop</type>
+<name>Laptop 7th Gen</name>
+<price>$699.99</price>
+<image>laptop4.jpg</image>
+<manufacturer>Fasttrack</manufacturer>
+<condition>New</condition>
+<discount>$200.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="laptop5">
+<type>laptop</type>
+<name>Laptop 7th Gen</name>
+<price>$999.99</price>
+<image>laptop5.jpg</image>
+<manufacturer>Crown</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="laptop6">
+<type>laptop</type>
+<name>Laptop 7th Gen</name>
+<price>$799.99</price>
+<image>laptop6.jpg</image>
+<manufacturer>Tommy</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="laptop7">
+<type>laptop</type>
+<name>Laptop 7th Gen</name>
+<price>$799.99</price>
+<image>laptop7.jpg</image>
+<manufacturer>Tommy</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="laptop8">
+<type>laptop</type>
+<name>Laptop 7th Gen</name>
+<price>$799.99</price>
+<image>laptop8.jpg</image>
+<manufacturer>Tommy</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="ext1">
+<type>external</type>
+<name>External Device</name>
+<price>$199.99</price>
+<image>ext1.jpg</image>
+<manufacturer>Titan</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="ext2">
+<type>external</type>
+<name>External Device</name>
+<price>$299.99</price>
+<image>ext2.jpg</image>
+<manufacturer>Sonata</manufacturer>
+<condition>New</condition>
+<discount>$10.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="ext3">
+<type>external</type>
+<name>External Device</name>
+<price>$499.99</price>
+<image>ext3.jpg</image>
+<manufacturer>Rolex</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="ext4">
+<type>external</type>
+<name>External Device</name>
+<price>$699.99</price>
+<image>ext4.jpg</image>
+<manufacturer>Fasttrack</manufacturer>
+<condition>New</condition>
+<discount>$200.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="ext5">
+<type>external</type>
+<name>External Device</name>
+<price>$999.99</price>
+<image>ext5.jpg</image>
+<manufacturer>Crown</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="ext6">
+<type>external</type>
+<name>External Device</name>
+<price>$799.99</price>
+<image>ext6.jpg</image>
+<manufacturer>Tommy</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="ext7">
+<type>external</type>
+<name>External Device</name>
+<price>$799.99</price>
+<image>ext7.jpg</image>
+<manufacturer>Tommy</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+<Product id="ext8">
+<type>external</type>
+<name>External Device</name>
+<price>$799.99</price>
+<image>ext8.jpg</image>
+<manufacturer>Tommy</manufacturer>
+<condition>New</condition>
+<discount>$100.0</discount>
+<accessories>
+<accessory>accessories.jpg</accessory>
+<accessory>accessories.jpg</accessory>
+</accessories>
+</Product>
+
+<Product id="Laptoplenovo"><type>laptop</type><name>laptop lenovo</name><price>16000</price><image>lenovolap.jpg</image><manufacturer>lenovo</manufacturer><condition>New</condition><discount>500</discount><accessories><accessory>accessories.jpg</accessory></accessories></Product></ProductCatalog>

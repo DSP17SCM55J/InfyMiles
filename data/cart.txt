@@ -1,0 +1,4 @@
+smartwatch,0
+headphone1,33
+headphone2,10
+phone3,100
