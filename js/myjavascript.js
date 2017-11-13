@@ -16,5 +16,3 @@
             $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
         }
     });
-
-	
