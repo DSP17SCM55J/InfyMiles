@@ -25,14 +25,14 @@
 
 				
 			<servlet>
-        <servlet-name>SearchTextServlet</servlet-name>
-        <servlet-class>SearchTextServlet</servlet-class>
+        <servlet-name>index</servlet-name>
+        <servlet-class>index</servlet-class>
     </servlet>
 
 
     <servlet-mapping>
-        <servlet-name>SearchTextServlet</servlet-name>
-        <url-pattern>/SearchTextServlet</url-pattern>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
     </servlet-mapping>
 	
 
