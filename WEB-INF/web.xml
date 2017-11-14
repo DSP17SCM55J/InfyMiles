@@ -23,7 +23,41 @@
   metadata-complete="true">
 
 
-				
+			<servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>LoginServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+      <servlet>
+        <servlet-name>ValidRegistration</servlet-name>
+        <servlet-class>ValidRegistration</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>ValidRegistration</servlet-name>
+        <url-pattern>/ValidRegistration</url-pattern>
+    </servlet-mapping>
+
+      <servlet>
+        <servlet-name>MySqlDataStoreUtilities</servlet-name>
+        <servlet-class>MySqlDataStoreUtilities</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>MySqlDataStoreUtilities</servlet-name>
+        <url-pattern>/MySqlDataStoreUtilities</url-pattern>
+    </servlet-mapping>
+
+    
+
 			<servlet>
         <servlet-name>index</servlet-name>
         <servlet-class>index</servlet-class>
@@ -35,5 +69,16 @@
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
 	
+
+  <servlet>
+        <servlet-name>CheckUserServlet</servlet-name>
+        <servlet-class>CheckUserServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>CheckUserServlet</servlet-name>
+        <url-pattern>/CheckUserServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>
