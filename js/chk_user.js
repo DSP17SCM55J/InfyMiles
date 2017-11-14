@@ -1,10 +1,10 @@
-$('#username').keyup(function()
+$('#emailId').keyup(function()
 {
     
-    var username = $('#username').val();
+    var emailId = $('#emailId').val();
     $('#status').html('<span><div><img src="loading.gif"></div></span>');
-    if (username!=''){
-        $.post('checkUserServlet',{username:username},
+    if (emailId!=''){
+        $.post('CheckUserServlet',{emailId:emailId},
         function(data){
             $('#status').html(data);
         });

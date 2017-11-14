@@ -17,23 +17,16 @@ public class CheckUserServlet extends HttpServlet{
   int usersearch=0;
   //ArrayList<Pojo_user> list = new ArrayList<>();
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-    HttpSession session = request.getSession(true);
+    HttpSession session = request.getSession();
     PrintWriter out = response.getWriter();
     String Uname="";
-    String USERNAME=request.getParameter("username");
+    String USERNAME=request.getParameter("emailId");
       String User=USERNAME.toLowerCase();
       
     
     try{
       Class.forName("com.mysql.jdbc.Driver");
       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/InfyMiles", "root", "root");
-      String url = (String)session.getAttribute("url");
-      String connuname = (String)session.getAttribute("connuname");
-      String password = (String)session.getAttribute("password");
-
-
-
-     //Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","scott","Atos123");
       String sql = "SELECT lower(emailId) emailId FROM Register where lower(emailId)=?";
       PreparedStatement st = conn.prepareStatement(sql);
       st.setString(1,User);
@@ -49,7 +42,7 @@ public class CheckUserServlet extends HttpServlet{
     if(User.equals(Uname)){     
 
       out.println("<font color=red>");
-      out.print("User already exists");
+      out.print("email already exists");
       out.println("</font>");
     }
     else 
