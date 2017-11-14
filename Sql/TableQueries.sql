@@ -9,6 +9,16 @@ password varchar(20),
 userType varchar(20)
 );
 
+truncate table register;
+Alter Table register ADD city varchar(20) not null AFTER phoneNumber, Add state varchar(20) not null AFTER city,
+ Add zipcode varchar(5) not null AFTER state;
+
+, phoneNumber varchar(10) not null,city varchar(20) not null,state varchar(20) not null, 
+zipcode varchar(5) not null; 
+desc register;
+Insert  into Register values('divyank08jain@gmail.com','Divyank','12345','customer','2951 S king drive','1234567890','chicago','IL','60606');
+select * from Register;
+
 create table Cars(carId int Primary key,
  carName varchar(20),
  carCategory varchar(20),
