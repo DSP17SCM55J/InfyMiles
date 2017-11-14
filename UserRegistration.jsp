@@ -4,6 +4,14 @@
 				<div class="container" align="center" style="padding:50px">
 					<form method='post' action='ValidateCredential.jsp'>
 					<table><b>
+						<tr>
+							<td>
+								<select id='role' name='role'>
+									<option value='customer'>Customer</option>
+									<option value='storeManager'>Store Manager</option>
+								</select>
+							</td>
+						</tr>
 						<br/><br/>
 						<tr>
 							<td>
@@ -22,16 +30,6 @@
 						</tr>
 
 						<tr>
-							<td>Role</td>
-							<td><select id='role' name='role'>
-								<option value='customer'>Customer</option>
-								<option value='storeManager'>Store Manager</option>
-							
-							</select></td>
-						</tr>
-
-						
-						<tr>
 							<td><input type="submit" style="padding:10px" value="SignUp" class="btn btn-gold">
 								
 							</td>
@@ -39,6 +37,8 @@
 						
 					</form> 
 				</table> 
+
+				<div style="padding:20px;text-decoration:none" ><a href='login.jsp'>Already a user? Login.</a></div>
 				
 			</div>
 <%@include file ='footer.jsp' %>

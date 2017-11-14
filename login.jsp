@@ -3,6 +3,13 @@
 				<div class="container" align="center" style="padding:50px">
 					<form method='post' action='ValidateCredential.jsp'>
 					<table><b>
+						<tr>
+							<td><select id='role' name='role'>
+								<option value='customer'>Customer</option>
+								<option value='storeManager'>Store Manager</option>
+								
+							</select></td>
+						</tr>
 						<br/><br/>
 						<tr>
 							<td>
@@ -19,14 +26,7 @@
 							
 							</td>
 						</tr>
-						<tr>
-							<td>Role</td>
-							<td><select id='role' name='role'>
-								<option value='customer'>Customer</option>
-								<option value='storeManager'>Store Manager</option>
-								
-							</select></td>
-						</tr>
+						
 
 					</form> 
 				</table> 
