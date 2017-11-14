@@ -16,6 +16,7 @@ import org.xml.sax.SAXException;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.*;
+import java.lang.*;
 
 public class index extends HttpServlet {
 
@@ -26,7 +27,22 @@ public class index extends HttpServlet {
         java.io.PrintWriter out = response.getWriter();
 			XMLParserSAX xml = new XMLParserSAX();
 			String map = xml.processReq();
-			out.println(map);
+			String parts[] = map.split("=");
+			//out.println(parts[]);
+			int nw=1;
+			String s = null;
+			MySqlDataStoreUtilities mysql = new MySqlDataStoreUtilities();
+		while (nw < parts.length){
+			s= parts[nw];
+		s = s.replaceAll("\\w+$", "").trim();
+		s = s.substring(0, s.length() - 1);
+		s = s.replaceAll(",", "','");
+		s= "'" + s + "'";
+		String output = mysql.InsertUser(s);
+		out.println(output);
+		out.print(s + "<br/>");
+		nw=nw+1;
+		}
         out.close();
     }     
 	

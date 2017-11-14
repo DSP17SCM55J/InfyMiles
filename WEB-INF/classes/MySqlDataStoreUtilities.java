@@ -68,12 +68,32 @@ public class MySqlDataStoreUtilities {
 			//check = false;
 				return false;
 			}
-
+		
 		}
 		catch(Exception e){
 			return false;
 		}
 
 	}
+	
+	
+		public void InsertUser(String data){
+
+		java.sql.Statement stm = null;
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/InfyMiles", "root", "root");
+			stm = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			PreparedStatement pst = conn.prepareStatement("Insert into Cars values("+ data+")");
+			pst.executeUpdate();
+			pst.close();
+			conn.close();	
+		}
+		catch(Exception e){
+			}
+
+	}
+	
+	
 }
 

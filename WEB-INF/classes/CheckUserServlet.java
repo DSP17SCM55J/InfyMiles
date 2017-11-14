@@ -16,7 +16,7 @@ import java.sql.ResultSet;
 public class CheckUserServlet extends HttpServlet{
   int usersearch=0;
   //ArrayList<Pojo_user> list = new ArrayList<>();
-  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+  protected void processReq(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
     HttpSession session = request.getSession();
     PrintWriter out = response.getWriter();
     String Uname="";
@@ -52,4 +52,20 @@ public class CheckUserServlet extends HttpServlet{
       out.println("</font>");
     }
   }
+  
+  
+  
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, java.io.IOException {
+        processReq(request, response);
+		  
+    } 
+	
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, java.io.IOException {
+         processReq(request, response);
+    }
+	
+  
 }
