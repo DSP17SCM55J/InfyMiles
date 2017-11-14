@@ -59,14 +59,14 @@
     
 
 			<servlet>
-        <servlet-name>index</servlet-name>
-        <servlet-class>index</servlet-class>
+        <servlet-name>LoadData</servlet-name>
+        <servlet-class>LoadData</servlet-class>
     </servlet>
 
 
     <servlet-mapping>
-        <servlet-name>index</servlet-name>
-        <url-pattern>/index</url-pattern>
+        <servlet-name>LoadData</servlet-name>
+        <url-pattern>/LoadData</url-pattern>
     </servlet-mapping>
 	
 

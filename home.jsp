@@ -53,6 +53,9 @@
 	<body class="page1" id="top">
 		<div class="main">
 <!--==============================header=================================-->
+<%
+if (request.getParameter("check")==null){
+response.sendRedirect("LoadData");}%>
 			<header>
 			<div>
 			<div style="width:100;background-color:black">

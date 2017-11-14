@@ -95,5 +95,34 @@ public class MySqlDataStoreUtilities {
 	}
 	
 	
+	
+	
+	public boolean checkData(){
+
+
+		java.sql.Statement stm = null;
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/InfyMiles", "root", "root");
+			stm = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			PreparedStatement pst = conn.prepareStatement("Select * from cars");
+			ResultSet rst;
+			rst = pst.executeQuery();
+			if(rst.next()){
+				return true;	
+			}
+
+			else{
+				return false;
+			}
+		
+		}
+		catch(Exception e){
+			return false;
+		}
+
+	}
+	
+	
 }
 
