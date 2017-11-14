@@ -5,6 +5,13 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import java.io.*;
 
 import com.mongodb.AggregationOutput;
@@ -17,20 +24,17 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 import com.mongodb.DBCursor;
 import com.mongodb.ServerAddress;
-
 import com.mongodb.WriteResult;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 
-public class WriteReviewServlet {
+public class MongoDBDataStoreUtilities extends HttpServlet {
 	MongoClient mongo = new MongoClient("localhost", 27017);
 	DBCollection myReviews=null;
 	
-	
-	public void reviewadd(HashMap<String,BeanReviewAdd> beanvalue) throws ClassNotFoundException
+    public void addReview(HashMap<String,BeanReviewAdd> beanvalue) throws ClassNotFoundException
 	{
-	
 	BeanReviewAdd addBean =  new BeanReviewAdd();
 	Set set = beanvalue.entrySet();
 		Iterator iterator = set.iterator();
@@ -39,16 +43,10 @@ public class WriteReviewServlet {
 			Map.Entry entry = (Map.Entry)iterator.next();
 			addBean = (BeanReviewAdd)entry.getValue();
 		}
-	        String productModelName = addBean.getProductModelName();
-			String productCategory = addBean.getProductCategory();
-			String productPrice = addBean.getProductPrice();
-			String retailerName = addBean.getRetailerName();
-			String retailerZip = addBean.getRetailerZip();
-			String retailerCity = addBean.getRetailerCity();
-			String retailerState = addBean.getRetailerState();
-			String productOnSale=addBean.getProductOnSale();
+	        String carType = addBean.getCarType();
+            String carName = addBean.getCarName();
+			String price = addBean.getPrice();
 			String manufacturerName = addBean.getManufacturerName();
-			String manufacturerRebate = addBean.getManufacturerRebate();
 			String userID = addBean.getUserID();
 			String userAge = addBean.getUserAge();
 			String userGender = addBean.getUserGender();
@@ -58,22 +56,16 @@ public class WriteReviewServlet {
 			String reviewText = addBean.getReviewText();
 			
 			try
-			{
+			{   
 				DB db = mongo.getDB("InfyMiles");
 				myReviews = db.getCollection("Reviews");
 				
 				BasicDBObject bobj = new BasicDBObject("title", "Reviews").
 			
-				append("productModelNameDB", productModelName).
-				append("productCategoryDB", productCategory).
-				append("productPriceDB", productPrice).
-				append("retailerNameDB", retailerName).
-				append("retailerZipDB", retailerZip).
-				append("retailerCityDB", retailerCity).
-				append("productretailerStateDB", retailerState).
-				append("productOnSaleDB", productOnSale).
+				append("carTypeDB", carType).
+				append("carNameDB", carName).
+                append("priceDB", price).
 				append("manufacturerNameDB", manufacturerName).
-				append("manufacturerRebateDB", manufacturerRebate).
 				append("userIDDB", userID).
 				append("userAgeDB", userAge).
 				append("userGenderDB", userGender).
@@ -85,13 +77,14 @@ public class WriteReviewServlet {
 			}
 			catch(Exception e)
 			{
+                System.out.println("Error:"+e.getMessage());
 				e.printStackTrace();
 			}
 	
 	}
 	
 
-	public HashMap<String,ArrayList<BeanReviewAdd>> viewreview(String product_id)
+	public HashMap<String,ArrayList<BeanReviewAdd>> viewreview(String carName)
 	{
 		HashMap<String,ArrayList<BeanReviewAdd>> entriesadd = new HashMap<String, ArrayList<BeanReviewAdd>>();
 			ArrayList<BeanReviewAdd> beanreviews = new  ArrayList<BeanReviewAdd>();
@@ -100,7 +93,7 @@ public class WriteReviewServlet {
 	    myReviews = db.getCollection("Reviews");
 			
 	    BasicDBObject bobj = new BasicDBObject();
-		bobj.put("productModelNameDB", product_id);
+		bobj.put("carNameDB", carName);
 
 		DBCursor cursor = myReviews.find(bobj);
 	        
@@ -110,16 +103,10 @@ public class WriteReviewServlet {
 			{
 			    BasicDBObject bobj2 = (BasicDBObject) cursor.next();
 				BeanReviewAdd addproducts = new BeanReviewAdd();
-				addproducts.setProductModelName(bobj2.getString("productModelNameDB"));
-				addproducts.setProductCategory(bobj2.getString("productCategoryDB"));
-				addproducts.setProductPrice(bobj2.getString("productPriceDB"));
-				addproducts.setRetailerName(bobj2.getString("retailerNameDB"));
-				addproducts.setRetailerZip(bobj2.getString("retailerZipDB"));
-				addproducts.setRetailerCity(bobj2.getString("retailerCityDB"));
-				addproducts.setRetailerState(bobj2.getString("productretailerStateDB"));
-				addproducts.setProductOnSale(bobj2.getString("productOnSaleDB"));
+				addproducts.setCarType(bobj2.getString("carTypeDB"));
+				addproducts.setCarName(bobj2.getString("carNameDB"));
+				addproducts.setPrice(bobj2.getString("priceDB"));
 				addproducts.setManufacturerName(bobj2.getString("manufacturerNameDB"));
-				addproducts.setManufacturerRebate(bobj2.getString("manufacturerRebateDB"));
 				addproducts.setUserID(bobj2.getString("userIDDB"));
 				addproducts.setUserAge(bobj2.getString("userAgeDB"));
 				addproducts.setUserGender(bobj2.getString("userGenderDB"));

@@ -2,12 +2,10 @@
 
 				<div class="container" align="center" style="padding:50px">
                 <h2>Write Review</h2>
-                <form method = "post" action="WriteReviewServlet">
+                <form method = "post" action="WriteReviewsServlet">
                     <table><b>
-                        
                         <tr>
-                            <br/>
-							<td>Car Type</td>
+							<td style="vertical-align: middle;padding:10px">Car Type</td>
                             <td>
                                 <select class="login" id='cartype' name='cartype'>
 								    <option value='Hatchback'>Hatchback</option>
@@ -20,27 +18,27 @@
                             </td>
                         </tr> 
 						<tr>
-							<td>Car ID</td>
-                            <td><input class="login" type = "text" name="carID"></td>
+							<td style="vertical-align: middle;padding:10px">Car Name</td>
+                            <td><input class="login" type = "text" name="carName"></td>
                         </tr> 
                         
                         <tr>
-							<td>Price</td>
+							<td style="vertical-align: middle;padding:10px">Price</td>
                             <td><input class="login" type = "text" name="price"></td>
                         </tr> 
                         
                         <tr>
-							<td>User ID</td>
+							<td style="vertical-align: middle;padding:10px">User ID</td>
                             <td><input class="login" type = "text" name="userID"></td>
                         </tr> 
                         
                         <tr>
-							<td>User Age</td>
+							<td style="vertical-align: middle;padding:10px">User Age</td>
                             <td><input class="login" type = "text" name="userAge"></td>
                         </tr> 
                         
                         <tr>
-							<td>User Gender</td>
+							<td style="vertical-align: middle;padding:10px">User Gender</td>
                             <td><select class="login"  id='userGender' name='userGender'>
 								    <option value='Male'>Male</option>
 								    <option value='Female'>Female</option>
@@ -49,13 +47,18 @@
                         </tr> 
 
                         <tr>
-							<td>Manufacturer</td>
+							<td style="vertical-align: middle;padding:10px">User Occupation</td>
+                            <td><input class="login" type = "text" name="userOccupation"></td>
+                        </tr> 
+
+                        <tr>
+							<td style="vertical-align: middle;padding:10px">Manufacturer</td>
                             <td><input class="login" type = "text" name="manufacturer"></td>
                         </tr> 
                         
                         <tr>
                             <br/>
-							<td>Rating</td>
+							<td style="vertical-align: middle;padding:10px">Rating</td>
                             <td><select class="login" id='rating' name='rating'>
 								    <option value='5'>5</option>
 								    <option value='4'>4</option>
@@ -67,17 +70,17 @@
                         </tr> 
                         
                         <tr>
-							<td>Review Date</td>
+							<td style="vertical-align: middle;padding:10px">Review Date</td>
                             <td><input class="login" type = "date" name="reviewDate"></td>
                         </tr> 
                         
                         <tr>
-							<td>Comments</td>
+							<td style="vertical-align: middle;padding:10px">Comments</td>
                             <td><input class="login" type = "textarea" name="comments"></td>
                         </tr> 
                         
                         <tr>
-                            <td><input type="submit" style="padding:10px" value="submit" class="btn btn-gold"></td>
+                            <td><center><input type="submit" style="padding:10px" value="submit" class="btn btn-gold"></center></td>
                         </tr>
 
                     </table>
