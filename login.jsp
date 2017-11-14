@@ -1,7 +1,7 @@
 <%@include file ='header.jsp' %>
 
 				<div class="container" align="center" style="padding:50px">
-					<form method='post' action='ValidateCredential.jsp'>
+					<form method='post' action='LoginServlet'>
 					<table><b>
 						<tr>
 							<td><select id='role' name='role'>
@@ -13,7 +13,8 @@
 						<br/><br/>
 						<tr>
 							<td>
-								<input class="login" type="text"required name="emailId" onkeypress="return AlphaNumeric()" placeholder="EmailId" maxlength="10">
+								<input class="login" type="text"required name="emailId" onkeypress="return AlphaNumeric()" placeholder="EmailId" >
+								
 							</td>
 						</tr>
 						<tr>

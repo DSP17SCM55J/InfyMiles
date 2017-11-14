@@ -14,10 +14,10 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
-<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+		<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+		<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 	
 
 		<script src="js/jquery-migrate-1.2.1.js"></script>
@@ -60,9 +60,10 @@
 			<div class="row">
 			<div class="col-md-3">
 			<a href="index.html" >
-								<img src="images/logo.jpg" style="height:60px;width:200px;float:left;margin-left:80px;">
-							</a></div>
-							<div class="col-md-9">
+				<img src="images/logo.jpg" style="height:60px;width:200px;float:left;margin-left:80px;">
+			</a>
+			</div>
+			<div class="col-md-9">
 				
 						<nav class="navbar" style="float:left">
 								<ul class="sf-menu" >
@@ -325,12 +326,15 @@ var today = mm+'/'+dd+'/'+yyyy;
 					</div>
 				</div>
 				<div class="col-sm-9" >
+					
 						<div class="line" style="font-size:25px"><span><b>Featured Cars</b></span></div>
+						
 						<div class="col-sm-4" style="outline: 1px solid orange;">
 							<a href="#" style="text-decoration:none"><img src="images/audi1.jpg" style="padding:10px">
 							<p align="center" style="font-size:30px;color:black" ><b>$179</b>
 							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
-						</div><div class="col-sm-4" style="outline: 1px solid orange;">
+						</div>
+						<div class="col-sm-4" style="outline: 1px solid orange;">
 							<a href="#" style="text-decoration:none"><img src="images/bmw1.jpg" style="padding:10px">
 							<p align="center" style="font-size:30px;color:black" ><b>$159</b>
 							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
