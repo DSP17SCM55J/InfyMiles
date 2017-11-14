@@ -48,7 +48,6 @@
 				$().UItoTop({ easingType: 'easeOutQuart' });
 			});
 			
-
 		</script>
 	</head>
 	<body class="page1" id="top">
@@ -68,12 +67,14 @@
 						<nav class="navbar" style="float:left">
 								<ul class="sf-menu" >
 									<li class="current" ><a href="index.html">Home</a></li>
-									<li><a href="index-1.html" style="background-color:black;color:white;text-decoration:none">About</a></li>
-									<li><a href="index-2.html" style="background-color:black;color:white;text-decoration:none">Cars</a></li>
-									<li><a href="index-3.html" style="background-color:black;color:white;text-decoration:none">Services</a></li>
+									<li><form action="search.jsp">
+        <input type="text" name="search" style="font-size:20px;width:500px;height:38px" placeholder="Search Cars...."></li>
+   <li> <button type="submit" style="height:38px" class="btn btn-default">
+        <span class="glyphicon glyphicon-search"></span>
+    </button>
+</form></li>
 									<li><a href="login.jsp" style="background-color:black;color:white;text-decoration:none">Log in</a></li>
 									<li><a href="index-4.html" style="background-color:black;color:white;text-decoration:none">Join</a></li>
-									<li><a href="index-4.html" style="background-color:black;color:gold;text-decoration:none">Be a Renter</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -290,18 +291,34 @@ var today = mm+'/'+dd+'/'+yyyy;
 							</div>
 					
 						<div class="brands_products" style="padding-bottom:50px;padding-top:20px"><!--brands_products-->
-						<div class="line" style="font-size:20px"><span><b>Number of seats</b></span></div>
+						<div class="line" style="font-size:20px"><span><b>Categories</b></span></div>
 							<div class="brands-name" style="outline: 1px solid orange;" >
 								<ul class="nav nav-pills nav-stacked">
-									<li><a>1 seat   <span class="pull-right"><input type="checkbox" /></span></a> </li> 
-									<li><a>2 seats  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>3 seats  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>4 seats  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>5 seats  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>6 seats  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>7 seats  <span class="pull-right"><input type="checkbox" /></span></a> </li></ul>
+									<li><a>Hatchback  <span class="pull-right"><input type="checkbox" /></span></a> </li> 
+									<li><a>Sedan  <span class="pull-right"><input type="checkbox" /></span></a> </li>
+									<li><a>Van  <span class="pull-right"><input type="checkbox" /></span></a> </li>
+									<li><a>SUV  <span class="pull-right"><input type="checkbox" /></span></a> </li>
+									<li><a>Crossover  <span class="pull-right"><input type="checkbox" /></span></a> </li>
+									<li><a>Coupe  <span class="pull-right"><input type="checkbox" /></span></a> </li>
+									<li><a>Convertible  <span class="pull-right"><input type="checkbox" /></span></a> </li></ul>
 							</div>
 						</div><!--/brands_products-->
+						
+						
+						<div class="brands_products" style="padding-bottom:50px;padding-top:20px"><!--brands_products-->
+						<div class="line" style="font-size:20px"><span><b>Select Price</b></span></div>
+						<div class="brands-name" style="outline: 1px solid orange;" >
+							<ul class="nav nav-pills nav-stacked">
+									<li><a>$0 - $50  <span class="pull-right"><input type="checkbox" /></span></a> </li> 
+									<li><a>$51 - $150  <span class="pull-right"><input type="checkbox" /></span></a> </li>
+									<li><a>$151 - $300 <span class="pull-right"><input type="checkbox" /></span></a> </li>
+									<li><a>more than $300  <span class="pull-right"><input type="checkbox" /></span></a> </li>
+						</div><!--/brands_products-->
+						</div>
+						
+						
+						
+						
 						<div>
 						<input type="button" value="Search" class="btn btn-gold" style="color:black" /><br/><br/>
 						</div>
