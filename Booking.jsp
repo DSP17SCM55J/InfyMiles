@@ -31,10 +31,7 @@
 								<td style="vertical-align: middle;padding:10px">Location:</td>
 								<td><input class="login" type = "text" name="Location"></td>
 							</tr>
-							<tr>
-								<td style="vertical-align: middle;padding:10px">Full Address</td>
-								<td><input class="login" type = "text" name="Address"></td>
-							</tr>
+							
 							<tr> 
 								<td> <h4>Payment Details:</h4></td> 
 							</tr>
@@ -60,9 +57,7 @@
                         	</tr>
 							
 						</table>		
-					</form> 
-				 
-				
+					</form>				
 			</div>
 			<!--==============================footer=================================-->
 <%@ include file = 'footer.jsp' %>
