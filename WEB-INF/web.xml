@@ -81,4 +81,69 @@
         <url-pattern>/CheckUserServlet</url-pattern>
     </servlet-mapping>
 
+	
+	  <servlet>
+        <servlet-name>CarListservlet</servlet-name>
+        <servlet-class>CarListservlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>CarListservlet</servlet-name>
+        <url-pattern>/CarListservlet</url-pattern>
+    </servlet-mapping>
+
+	  <servlet>
+        <servlet-name>ViewCarServlet</servlet-name>
+        <servlet-class>ViewCarServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>ViewCarServlet</servlet-name>
+        <url-pattern>/ViewCarServlet</url-pattern>
+    </servlet-mapping>
+
+  
+  <servlet>
+        <servlet-name>AutoCompleteServlet</servlet-name>
+        <servlet-class>AutoCompleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>       
+        <servlet-name>AutoCompleteServlet</servlet-name>
+        <url-pattern>/AutoCompleteServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChartGeneration</servlet-name>
+        <servlet-class>ChartGeneration</servlet-class>
+    </servlet>
+
+    <servlet-mapping>       
+        <servlet-name>ChartGeneration</servlet-name>
+        <url-pattern>/ChartGeneration</url-pattern>
+    </servlet-mapping>
+
+<servlet>        
+        <servlet-name>SaveCars</servlet-name>
+        <servlet-class>SaveCars</servlet-class>
+    </servlet>
+
+    <servlet-mapping>       
+        <servlet-name>SaveCars</servlet-name>
+        <url-pattern>/SaveCars</url-pattern>
+    </servlet-mapping>
+
+<servlet>        
+        <servlet-name>ChangeCarServlet</servlet-name>
+        <servlet-class>ChangeCarServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>       
+        <servlet-name>ChangeCarServlet</servlet-name>
+        <url-pattern>/ChangeCarServlet</url-pattern>
+    </servlet-mapping>
+    
+	
 </web-app>

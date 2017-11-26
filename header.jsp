@@ -38,7 +38,9 @@
 <body class="page1" id="top">
 	<div class="main">
 		
-		
+		<%//HttpSession session = request.getSession();
+		String usertype = (String)session.getAttribute("usertype");
+		%>
 		
 		<!--==============================header=================================-->
 		<header>
@@ -47,24 +49,40 @@
 					<div class="jumbotron" style="background-color:black;height:120px">
 						<div class="row">
 							<div class="col-md-3">
-								<a href="home.jsp" >
+								<a href="home.jsp">
 									<img src="images/logo.jpg" style="height:60px;width:200px;float:left;margin-left:80px;">
 								</a></div>
 								<div class="col-md-9">
-
+									
 									<nav class="navbar" style="float:left">
 										<ul class="sf-menu" >
-											<li class="current" ><a href="index.html">Home</a></li>
-											<li><a href="index-1.html" style="background-color:black;color:white;text-decoration:none">About</a></li>
-											<li><a href="index-2.html" style="background-color:black;color:white;text-decoration:none">Cars</a></li>
-											<li><a href="index-3.html" style="background-color:black;color:white;text-decoration:none">Services</a></li>
-											<li><a href="index-4.html" style="background-color:black;color:gold;text-decoration:none">Be a Renter</a></li>
-										</ul>
-									</nav>
-								</div>
+											<script type="text/javascript" src="javascript.js"></script>
+											<li><a></a></li>
+											<li> <!-- <form action="search.jsp"> -->
+												<input type="text" name="search" class="input" id="searchId" onkeyup="doCompletion()" placeholder="search here.."
+												style="font-size:20px;width:500px;height:38px" placeholder="Search Cars....">
+												<div id="autoRow">
+													<table id="completeTable" class="gridtable" style="position: absolute; width: 500px;"></table>
+												</div> 
+											</li>
+											<li> <button type="submit" style="height:38px" class="btn btn-default">
+												<span class="glyphicon glyphicon-search"></span>
+											</button>
+										</form></li><li><a></a></li>
+										<% if (usertype==null){ %>
+											<li><a href="login.jsp" style="background-color:black;color:white;text-decoration:none">Log in</a></li>
+											<li><a href="UserRegistration.jsp" style="background-color:black;color:white;text-decoration:none">Sign up</a></li>
+											<% }else{ %>
+
+											<li><p style="background-color:black;color:white;text-decoration:none">Welcome <% out.println(usertype); %></p></li>
+											<li><a href="login.jsp" style="background-color:black;color:white;text-decoration:none">Log Out</a></li>
+											<% } %>
+									</ul>
+								</nav>
 							</div>
 						</div>
 					</div>
+				</div>
 
-				</header>
-				<!--=====================================================================-->
+			</header>
+			<!--=====================================================================-->

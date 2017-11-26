@@ -14,6 +14,12 @@ public class LoginServlet extends HttpServlet{
     	String password = request.getParameter("password");
     	String role = request.getParameter("role");
 
+
+      HttpSession session = request.getSession();
+          //String info = new String("Info");
+
+            
+
     	
 
     	MySqlDataStoreUtilities msdsu = new MySqlDataStoreUtilities();
@@ -24,14 +30,20 @@ public class LoginServlet extends HttpServlet{
      //String filePath = "../webapps/csj/Users/Pojo_user.txt";
 
        if(check==true){
-        response.sendRedirect("home.jsp");
-        
+        if(role.equalsIgnoreCase("storemanager")){
+          session.setAttribute("usertype",role); 
+          response.sendRedirect("StoreManager.jsp");
+        }
+        else{
+          session.setAttribute("usertype",role); 
+          response.sendRedirect("home.jsp"); 
+        }
        }
        else{
-        out.println("U r not registered");
+          out.println("U r not registered");
        }
 
-       HttpSession session = request.getSession();      
+      
        
        response.setContentType("text/html");
    }

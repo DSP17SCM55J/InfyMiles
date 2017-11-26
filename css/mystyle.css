@@ -9,7 +9,7 @@
     font-size: 16px;
 }
 
-#get-start input[type=button]{
+#get-start input[type=button],input[type=submit]{
     position: relative;
     left: 0;
     outline: none;

@@ -7,6 +7,8 @@
   <center>
   <link rel="stylesheet" href="style.css">
 
+  <% response.sendRedirect("ChartGeneration"); %>
+
 		<center><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> <h1><font color="#1ab188">Create a New Account</font></h1> </center>
  <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="javascripts.jsp"></script>

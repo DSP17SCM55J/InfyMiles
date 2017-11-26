@@ -1,4 +1,4 @@
-
+package classes;
 public class Car {
 	private String id;
     private String carName;

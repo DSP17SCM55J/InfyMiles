@@ -8,29 +8,43 @@ name varchar(30),
 password varchar(20),
 userType varchar(20)
 );
-
+SET SQL_SAFE_UPDATES = 0;
 truncate table register;
 Alter Table register ADD city varchar(20) not null AFTER phoneNumber, Add state varchar(20) not null AFTER city,
  Add zipcode varchar(5) not null AFTER state;
 
-, phoneNumber varchar(10) not null,city varchar(20) not null,state varchar(20) not null, 
-zipcode varchar(5) not null; 
+#, phoneNumber varchar(10) not null,city varchar(20) not null,state varchar(20) not null, 
+#zipcode varchar(5) not null; 
 desc register;
 Insert  into Register values('divyank08jain@gmail.com','Divyank','12345','customer','2951 S king drive','1234567890','chicago','IL','60606');
 select * from Register;
 
-create table Cars(carId int Primary key,
- carName varchar(20),
- carCategory varchar(20),
- carBrandName varchar(20),
- carMileage varchar(20),
- carModel varchar(20),
- carProductionYear varchar(20),
- carColor varchar(20),
- carImagePath varchar(200),
- carPrice varchar(20),
- carReservationStatus int
-);
+select * from Cars;
+drop table  Cars;
+
+truncate from Cars where carId = 200;
+Delete from Cars where carId = 200;
+
+CREATE TABLE `cars` (
+  `carId` int(11) NOT NULL,
+  `carName` varchar(50) DEFAULT NULL,
+  `carCategory` varchar(20) DEFAULT NULL,
+  `carBrandName` varchar(20) DEFAULT NULL,
+  `carModel` varchar(20) DEFAULT NULL,
+  `carMileage` varchar(20) DEFAULT NULL,
+  `carProductionYear` varchar(20) DEFAULT NULL,
+  `carColor` varchar(20) DEFAULT NULL,
+  `carImagePath` varchar(200) DEFAULT NULL,
+  `carPrice` varchar(20) DEFAULT NULL,
+  `carReservationStatus` int(11) DEFAULT NULL,
+  `location` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`carId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+Select location, Count () as counts from Cars GROUP BY location;
+select location, count(*) as counting  from cars group by location;
+select * from Cars;
+Update Cars set carId = 200, carName = 'efwe', carCategory = 'edcw',carBrandName = 'wef',carModel = 'ewef',carMileage = 'ewfwe',carProductionYear = '2017',carColor = 'efw', carImagePath = 'ef.jpg', carPrice = '300',carReservationStatus = 0,location = 'chicago' where carId= 48;
 
 create table Orders(
 orderId int  Primary key,
