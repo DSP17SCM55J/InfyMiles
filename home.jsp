@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <%@ page import="java.util.*" %>
 <%@ page import = "beans.Car" %>
 <!-- <%@ page import =" javax.servlet.http.*" %> -->
@@ -21,6 +22,8 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
 	<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+
 	
 
 	<script src="js/jquery-migrate-1.2.1.js"></script>
@@ -63,6 +66,7 @@
 		response.sendRedirect("LoadData");}%>
 		<header>
 			<div>
+
 				<div style="width:100;background-color:black">
 					<div class="jumbotron" style="background-color:black;height:120px">
 						<div class="row">
@@ -101,6 +105,8 @@
 									</nav>
 								</div>
 							</div>
+
+			
 						</div>
 					</div>
 
@@ -341,6 +347,7 @@
 								</div>
 							</div>
 
+
 							  
 
 							<div class="col-sm-9" >
@@ -363,6 +370,8 @@
 												<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
 											</div>
 						<!-- <div class="col-sm-4" style="outline: 1px solid orange;">
+
+				
 							<a href="#" style="text-decoration:none"><img src="images/bmw1.jpg" style="padding:10px">
 							<p align="center" style="font-size:30px;color:black" ><b>$159</b>
 							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
