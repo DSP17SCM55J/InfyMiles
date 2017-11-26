@@ -4,15 +4,15 @@
 				<div class="container" align="center" style="padding:50px">
 					<form method='post' action='ValidRegistration'>
 					<table><b>
-						<tr>
-							<td>
-								<select id='role' name='role'>
-									<option value='customer'>Customer</option>
-									<option value='storeManager'>Store Manager</option>
-								</select>
-							</td>
-						</tr>
 						<br/><br/>
+						<tr>
+							
+							<td><select id='role' name='role'>
+								<option value='customer'>Customer</option>
+								<option value='storeManager'>Store Manager</option>
+							
+							</select></td>
+						</tr>
 						<tr>
 							<td>
 								<input class="login" type="text"required name="name" onkeypress="return onlyAlphabets()" placeholder="Name" maxlength="30"/> 
@@ -58,7 +58,7 @@
 								<input class="login" type="text"required onkeypress="return onlyNumbers()" name="zipcode" placeholder="Zipcode" maxlength="5"/> 
 							</td>
 						</tr>
-						
+										
 						<tr>
 							<td><input type="submit" style="padding:10px" value="SignUp" class="btn btn-gold">
 								
@@ -67,8 +67,6 @@
 						
 					</form> 
 				</table> 
-
-				<div style="padding:20px;text-decoration:none" ><a href='login.jsp'>Already a user? Login.</a></div>
 				
 			</div>
 			

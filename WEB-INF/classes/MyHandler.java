@@ -23,6 +23,7 @@ private Map<String,Car> CarList = null;
     boolean bcarImagePath = false;
 	boolean bcarPrice = false;
 	boolean bcarReservationStatus = false;
+	boolean blocation = false;
     
     public void startElement(String uri, String localName, String qName, Attributes attributes)
             throws SAXException {
@@ -57,6 +58,8 @@ private Map<String,Car> CarList = null;
             bcarPrice = true;
         }else if (qName.equalsIgnoreCase("carReservationStatus")) {
             bcarReservationStatus = true;
+        }else if (qName.equalsIgnoreCase("location")) {
+            blocation = true;
         }
     }
 
@@ -105,6 +108,10 @@ private Map<String,Car> CarList = null;
         else if (bcarReservationStatus) {
             ncar.setcarReservationStatus(new String(ch, start, length));
             bcarReservationStatus = false;
+        }
+		else if (blocation) {
+            ncar.setLocation(new String(ch, start, length));
+            blocation = false;
         }
     }
 }

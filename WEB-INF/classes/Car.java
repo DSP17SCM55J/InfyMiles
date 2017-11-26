@@ -10,6 +10,7 @@ public class Car {
 	private String carImagePath;
 	private String carPrice;
 	private String carReservationStatus;
+	private String location;
     
 	
 	public String getId() {
@@ -82,10 +83,17 @@ public class Car {
     public void setcarReservationStatus(String carReservationStatus) {
         this.carReservationStatus = carReservationStatus;
     } 
+	
+	public String getLocation() {
+        return location;
+    }
+    public void setLocation(String location) {
+        this.location = location;
+    } 
  
     @Override
     public String toString() {
-        return this.id + "," + this.carName+ "," + this.carCategory + "," + this.carBrandName +"," + this.carModel + "," + this.carMileage +"," + this.carProductionYear + "," + this.carColor + "," + this.carImagePath + "," + this.carPrice + "," + this.carReservationStatus;
+        return this.id + "," + this.carName+ "," + this.carCategory + "," + this.carBrandName +"," + this.carModel + "," + this.carMileage +"," + this.carProductionYear + "," + this.carColor + "," + this.carImagePath + "," + this.carPrice + "," + this.carReservationStatus + "," + location;
     }
     
 }

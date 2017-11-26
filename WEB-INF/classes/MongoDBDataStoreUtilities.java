@@ -47,7 +47,8 @@ public class MongoDBDataStoreUtilities extends HttpServlet {
             String carName = addBean.getCarName();
 			String price = addBean.getPrice();
 			String manufacturerName = addBean.getManufacturerName();
-			String userID = addBean.getUserID();
+			String carID = addBean.getCarID();
+			String userName = addBean.getUserName();
 			String userAge = addBean.getUserAge();
 			String userGender = addBean.getUserGender();
 			String userOccupation = addBean.getUserOccupation();
@@ -66,7 +67,8 @@ public class MongoDBDataStoreUtilities extends HttpServlet {
 				append("carNameDB", carName).
                 append("priceDB", price).
 				append("manufacturerNameDB", manufacturerName).
-				append("userIDDB", userID).
+				append("carIDDB", carID).
+				append("userNameDB",userName).
 				append("userAgeDB", userAge).
 				append("userGenderDB", userGender).
 				append("userOccupationDB", userOccupation).
@@ -84,10 +86,10 @@ public class MongoDBDataStoreUtilities extends HttpServlet {
 	}
 	
 
-	public HashMap<String,ArrayList<BeanReviewAdd>> viewreview(String carName)
+	public HashMap<String,ArrayList<BeanReviewAdd>> viewReview(String carName)
 	{
 		HashMap<String,ArrayList<BeanReviewAdd>> entriesadd = new HashMap<String, ArrayList<BeanReviewAdd>>();
-			ArrayList<BeanReviewAdd> beanreviews = new  ArrayList<BeanReviewAdd>();
+		ArrayList<BeanReviewAdd> beanreviews = new  ArrayList<BeanReviewAdd>();
 	
 	    DB db = mongo.getDB("InfyMiles");
 	    myReviews = db.getCollection("Reviews");
@@ -107,7 +109,8 @@ public class MongoDBDataStoreUtilities extends HttpServlet {
 				addproducts.setCarName(bobj2.getString("carNameDB"));
 				addproducts.setPrice(bobj2.getString("priceDB"));
 				addproducts.setManufacturerName(bobj2.getString("manufacturerNameDB"));
-				addproducts.setUserID(bobj2.getString("userIDDB"));
+				addproducts.setCarID(bobj2.getString("carIDDB"));
+				addproducts.setUserName(bobj2.getString("userNameDB"));
 				addproducts.setUserAge(bobj2.getString("userAgeDB"));
 				addproducts.setUserGender(bobj2.getString("userGenderDB"));
 				addproducts.setUserOccupation(bobj2.getString("userOccupationDB"));

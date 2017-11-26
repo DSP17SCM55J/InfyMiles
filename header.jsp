@@ -36,35 +36,57 @@
 	<script src="booking/js/booking.js"></script>
 </head>
 <body class="page1" id="top">
-	<div class="main">
+	
 		
-		
-		
+		<div class="fixheader" align="center">
+		<div>
 		<!--==============================header=================================-->
 		<header>
-			<div>
-				<div style="width:100;background-color:black">
-					<div class="jumbotron" style="background-color:black;height:120px">
+					<div class="jumbotron" style="background-color:black;padding:20px">
 						<div class="row">
 							<div class="col-md-3">
-								<a href="home.jsp" >
-									<img src="images/logo.jpg" style="height:60px;width:200px;float:left;margin-left:80px;">
-								</a></div>
-								<div class="col-md-9">
-
-									<nav class="navbar" style="float:left">
-										<ul class="sf-menu" >
-											<li class="current" ><a href="index.html">Home</a></li>
-											<li><a href="index-1.html" style="background-color:black;color:white;text-decoration:none">About</a></li>
-											<li><a href="index-2.html" style="background-color:black;color:white;text-decoration:none">Cars</a></li>
-											<li><a href="index-3.html" style="background-color:black;color:white;text-decoration:none">Services</a></li>
-											<li><a href="index-4.html" style="background-color:black;color:gold;text-decoration:none">Be a Renter</a></li>
-										</ul>
-									</nav>
+								<a href="home.jsp">
+								<img src="images/logo.jpg" style="height:60px;width:200px;float:left;margin-left:80px;">
+							</a></div>
+							<div class="col-md-9">
+				
+							<nav class="navbar" style="float:left">
+								<ul class="sf-menu" >
+									
+									<li><form action="AutoCompleteSearchServlet">
+        <input type="text" name="search" id="search" class="input_search" style="font-size:20px;width:500px;height:38px" placeholder="Search Cars...."></li>
+		
+		<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+		<script>
+		jQuery(function(){
+		$("#search").autocomplete("AutoCompleteServlet");
+		});
+		</script>
+   <li> <button type="submit" style="height:38px" class="btn btn-default">
+        <span class="glyphicon glyphicon-search"></span>
+    </button>
+</form></li><
+<%String username = (String) session.getAttribute("username");
+if (username==null){%>
+									<li><a href="login.jsp" style="font-size:20px;background-color:black;color:white;text-decoration:none">Log in</a></li>
+									<li><a href="UserRegistration.jsp" style="font-size:20px;background-color:black;color:white;text-decoration:none">Sign up</a></li>
+<%}else{%><li>
+<div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" style="background-color:black;color:gold;" data-toggle="dropdown"><%out.println(username.toUpperCase());%>
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" style="top:35px;background-color:black;">
+      <li><a href="ProfileServlet" style="color:gold">Profile</a></li>
+      <li><a href="bookinghistory.jsp" style="color:gold">History</a></li>
+	  <li><a href="home.jsp?logout=done"style="color:gold">Log Out</a></li>
+    </ul>
+  </div>
+<%}%>
+							<li><a href="trending.jsp" style="font-size:20px;background-color:black;color:white;text-decoration:none">Trending</a></li>	
+								</ul>
+							</nav>
 								</div>
 							</div>
 						</div>
-					</div>
 
 				</header>
 				<!--=====================================================================-->

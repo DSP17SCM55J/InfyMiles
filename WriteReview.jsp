@@ -1,36 +1,55 @@
 <%@include file ='header.jsp' %>
+<%@page import = "java.util.*"%>
+<%@page import = "java.text.*"%>
+<%@page import = "java.io.*,java.util.*, javax.servlet.*" %>
 
+
+                </div>
+                </div>
+                </div>
+                </div>
 				<div class="container" align="center" style="padding:50px">
                 <h2>Write Review</h2>
+
+                <%
+                ArrayList<String> carlist = (ArrayList<String>) session.getAttribute("carlist");
+                //session.setAttribute("carlist",carlist);
+                
+                int i=0;
+                %>
+                <%
+                Date date = new Date();
+                SimpleDateFormat ft = new SimpleDateFormat ("yyyy/MM/dd");
+                %>
+
+
                 <form method = "post" action="WriteReviewsServlet">
                     <table><b>
                         <tr>
 							<td style="vertical-align: middle;padding:10px">Car Type</td>
                             <td>
-                                <select class="login" id='cartype' name='cartype'>
-								    <option value='Hatchback'>Hatchback</option>
-								    <option value='Sedan'>Sedan</option>
-                                    <option value='Van'>Van</option>
-								    <option value='Crossover'>Crossover</option>
-                                    <option value='Coupe'>Coupe</option>
-                                    <option value='Convertible'>Convertible</option>
-                                </select>
+                                <input class="login" type = "text" name="carName" readonly value= <%out.println(carlist.get(i+2));%>  >
                             </td>
                         </tr> 
 						<tr>
 							<td style="vertical-align: middle;padding:10px">Car Name</td>
-                            <td><input class="login" type = "text" name="carName"></td>
+                            <td><input class="login" type = "text" name="carName" value= <%out.println(carlist.get(i+1));%>></td>
                         </tr> 
                         
                         <tr>
 							<td style="vertical-align: middle;padding:10px">Price</td>
-                            <td><input class="login" type = "text" name="price"></td>
+                            <td><input class="login" type = "text" name="price" value= <%out.println(carlist.get(i+9));%> ></td>
                         </tr> 
                         
                         <tr>
-							<td style="vertical-align: middle;padding:10px">User ID</td>
-                            <td><input class="login" type = "text" name="userID"></td>
+							<td style="vertical-align: middle;padding:10px">Car ID</td>
+                            <td><input class="login" type = "text" name="carID" value= <%out.println(carlist.get(i+0));%> ></td>
                         </tr> 
+
+                        <tr>
+							<td style="vertical-align: middle;padding:10px">User Name</td>
+                            <td><input class="login" type = "text" name="userName" value = <% out.println(username); %>></td>
+                        </tr>
                         
                         <tr>
 							<td style="vertical-align: middle;padding:10px">User Age</td>
@@ -53,7 +72,7 @@
 
                         <tr>
 							<td style="vertical-align: middle;padding:10px">Manufacturer</td>
-                            <td><input class="login" type = "text" name="manufacturer"></td>
+                            <td><input class="login" type = "text" name="manufacturer" value= <%out.println(carlist.get(i+3));%> ></td>
                         </tr> 
                         
                         <tr>
@@ -71,7 +90,7 @@
                         
                         <tr>
 							<td style="vertical-align: middle;padding:10px">Review Date</td>
-                            <td><input class="login" type = "date" name="reviewDate"></td>
+                            <td><input class="login" type = "date" name="reviewDate" value = <% out.println(ft.format(date)); %>></td>
                         </tr> 
                         
                         <tr>

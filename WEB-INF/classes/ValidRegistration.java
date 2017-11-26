@@ -39,7 +39,7 @@ public class ValidRegistration extends HttpServlet {
 			bol = msdsu.insertUser(email,name,password,role,address,phoneNumber,city,state,zipcode);
 		
 			if(bol == true){
-				response.sendRedirect("home.jsp");
+				response.sendRedirect("login.jsp");
 			}
 		
 

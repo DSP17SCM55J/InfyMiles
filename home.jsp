@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page import = "java.util.*"%>
 <html lang="en">
 	<head>
 		<title>InfyMiles</title>
@@ -11,13 +12,14 @@
 		<link rel="stylesheet" href="css/owl.carousel.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/mystyle.css">
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-		<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
-		<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 	
 
 		<script src="js/jquery-migrate-1.2.1.js"></script>
@@ -54,61 +56,79 @@
 		<div class="main">
 <!--==============================header=================================-->
 <%
-if (request.getParameter("check")==null){
-response.sendRedirect("LoadData");}%>
+if (request.getParameter("logout")!=null)
+		session.invalidate();
+if (request.getParameter("check")==null)
+response.sendRedirect("LoadData");
+else if (request.getAttribute("carlist")==null)
+response.sendRedirect("ShowHomeCars");
+else{
+	
+	%>
 			<header>
 			<div>
-			<div style="width:100;background-color:black">
-			<div class="jumbotron" style="background-color:black;height:120px">
+			<div class="jumbotron" style="background-color:black;padding:30px">
 			<div class="row">
 			<div class="col-md-3">
-			<a href="index.html" >
-				<img src="images/logo.jpg" style="height:60px;width:200px;float:left;margin-left:80px;">
-			</a>
-			</div>
-			<div class="col-md-9">
+			<a href="home.jsp">
+							<img src="images/logo.jpg" style="height:60px;width:200px;float:left;margin-left:80px;">
+							</a></div>
+							<div class="col-md-9">
 				
 						<nav class="navbar" style="float:left">
 								<ul class="sf-menu" >
-									<li class="current" ><a href="index.html">Home</a></li>
-									<li><form action="search.jsp">
-        <input type="text" name="search" style="font-size:20px;width:500px;height:38px" placeholder="Search Cars...."></li>
+									
+									<li><form action="AutoCompleteSearchServlet">
+        <input type="text" name="search" id="search" class="input_search" style="font-size:20px;width:500px;height:38px" placeholder="Search Cars...."></li>
+		
+		<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+		<script>
+		jQuery(function(){
+		$("#search").autocomplete("AutoCompleteServlet");
+		});
+		</script>
    <li> <button type="submit" style="height:38px" class="btn btn-default">
         <span class="glyphicon glyphicon-search"></span>
     </button>
-</form></li>
-									<li><a href="login.jsp" style="background-color:black;color:white;text-decoration:none">Log in</a></li>
-									<li><a href="index-4.html" style="background-color:black;color:white;text-decoration:none">Join</a></li>
+</form></li><
+<%String username = (String) session.getAttribute("username");
+if (username==null){%>
+									<li><a href="login.jsp" style="font-size:20px;background-color:black;color:white;text-decoration:none">Log in</a></li>
+									<li><a href="UserRegistration.jsp" style="font-size:20px;background-color:black;color:white;text-decoration:none">Sign up</a></li>
+<%}else{%><li>
+<div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" style="background-color:black;color:gold;" data-toggle="dropdown"><%out.println(username.toUpperCase());%>
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" style="top:35px;background-color:black;">
+      <li><a href="ProfileServlet" style="color:gold">Profile</a></li>
+      <li><a href="bookinghistory.jsp" style="color:gold">History</a></li>
+	  <li><a href="home.jsp?logout=done"style="color:gold">Log Out</a></li>
+    </ul>
+  </div>
+<%}%>
+							<li><a href="trending.jsp" style="font-size:20px;background-color:black;color:white;text-decoration:none">Trending</a></li>	
 								</ul>
 							</nav>
 						</div>
 					</div>
-				</div>
 				</div>
 				
 			</header>
 			
 <!--===================+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 <div align="center" style=" padding: 25px" id="get-start">
- <input id="mapinput" type="text" placeholder="Enter Location Zip" class="lot" style="font-size:20px;width:500px;height:50px">
+<form action="CarListservlet" method="Post">
+ <input id="mapinput" type="text"required placeholder="Enter Location Zip" name="location" class="lot" style="font-size:20px;width:500px;height:50px">
           <script type="text/javascript">
   function initAutocomplete() {
-    // Create the autocomplete object, restricting the search to geographical
-    // location types.
     autocomplete = new google.maps.places.Autocomplete(
-        /** @type {!HTMLInputElement} */(document.getElementById('mapinput')),
-        {types: ['geocode']});
-
-    // When the user selects an address from the dropdown, populate the address
-    // fields in the form.
-    autocomplete.addListener('place_changed', fillInAddress);
+        /** @type {!HTMLInputElement} */(document.getElementById('mapinput')),options);
   }
 
-  function fillInAddress() {
-    // Get the place details from the autocomplete object.
-    var place = autocomplete.getPlace();
-
-  }
+  var options = {
+  types: ['(regions)'],
+  componentRestrictions: {country:'us'}
+};
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg0JApm5ORuNN_4ypS8fx9gFGGMqJqpgI&libraries=places&callback=initAutocomplete"
          async defer></script>
@@ -147,7 +167,8 @@ var today = mm+'/'+dd+'/'+yyyy;
 });
 });
 </script>
- <input type="button"  value="Continue"/>
+ <input type="submit" value="Continue"/>
+ </form>
 </div>
 
 
@@ -272,39 +293,40 @@ var today = mm+'/'+dd+'/'+yyyy;
 			<div class="row">
 				<div class="col-sm-2" >
 					<div class="left-sidebar">
+					<div><form action="LeftNavSearch" method="POST">
 						<div class="line" style="font-size:25px"><span><b>Brand</b></span></div>
 						<div class="brands-name" style="outline: 1px solid orange;">
 								<ul class="nav nav-pills nav-stacked">
-									<li><a>Audi  <span class="pull-right"><input type="checkbox" /></span></a> </li> 
-									<li><a>BMW  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Mercedes  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>VolksWagen <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Ferrari<span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Toyota<span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Honda<span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Chevrolet<span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Mazda<span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>KIA<span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Range Rover<span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Rolls Royce<span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Bugatti<span class="pull-right"><input type="checkbox" /></span></a> </li> 
-									<li><a>Lamborghini<span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Ford<span class="pull-right"><input type="checkbox" /></span></a> </li>									
-									<li><a>Jaguar<span class="pull-right"><input type="checkbox" /></span></a> </li>									
+									<li><a>Audi  <span class="pull-right"><input type="checkbox" value="Audi" name="brand"/></span></a> </li> 
+									<li><a>BMW  <span class="pull-right"><input type="checkbox" value="BMW" name="brand"/></span></a> </li>
+									<li><a>Mercedes  <span class="pull-right"><input type="checkbox" value="Mercedes" name="brand"/></span></a> </li>
+									<li><a>VolksWagen <span class="pull-right"><input type="checkbox" value="VolksWagen" name="brand"/></span></a> </li>
+									<li><a>Ferrari<span class="pull-right"><input type="checkbox" value="Ferrari" name="brand"/></span></a> </li>
+									<li><a>Toyota<span class="pull-right"><input type="checkbox" value="Toyota" name="brand"/></span></a> </li>
+									<li><a>Honda<span class="pull-right"><input type="checkbox" value="Honda" name="brand"/></span></a> </li>
+									<li><a>Chevrolet<span class="pull-right"><input type="checkbox" value="Chevrolet" name="brand"/></span></a> </li>
+									<li><a>Mazda<span class="pull-right"><input type="checkbox" value="Mazda" name="brand"/></span></a> </li>
+									<li><a>KIA<span class="pull-right"><input type="checkbox" value="KIA" name="brand"/></span></a> </li>
+									<li><a>Range Rover<span class="pull-right"><input type="checkbox" value="Range Rover" name="brand"/></span></a> </li>
+									<li><a>Rolls Royce<span class="pull-right"><input type="checkbox" value="Rolls Royce" name="brand"/></span></a> </li>
+									<li><a>Bugatti<span class="pull-right"><input type="checkbox" value="Bugatti" name="brand"/></span></a> </li> 
+									<li><a>Lamborghini<span class="pull-right"><input type="checkbox" value="Lamborghini" name="brand"/></span></a> </li>
+									<li><a>Ford<span class="pull-right"><input type="checkbox" value="Ford" name="brand"/></span></a> </li>									
+									<li><a>Jaguar<span class="pull-right"><input type="checkbox" value="Jaguar" name="brand"/></span></a> </li>									
 									</ul>
 							</div>
 					
-						<div class="brands_products" style="padding-bottom:50px;padding-top:20px"><!--brands_products-->
+						<div class="brands_products" style="padding-bottom:20px;padding-top:20px"><!--brands_products-->
 						<div class="line" style="font-size:20px"><span><b>Categories</b></span></div>
 							<div class="brands-name" style="outline: 1px solid orange;" >
 								<ul class="nav nav-pills nav-stacked">
-									<li><a>Hatchback  <span class="pull-right"><input type="checkbox" /></span></a> </li> 
-									<li><a>Sedan  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Van  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>SUV  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Crossover  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Coupe  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>Convertible  <span class="pull-right"><input type="checkbox" /></span></a> </li></ul>
+									<li><a>Hatchback  <span class="pull-right"><input type="checkbox"  value="Hatchback" name="category"/></span></a> </li> 
+									<li><a>Sedan  <span class="pull-right"><input type="checkbox" value="Sedan" name="category"/></span></a> </li>
+									<li><a>Van  <span class="pull-right"><input type="checkbox" value="Van" name="category"/></span></a> </li>
+									<li><a>SUV  <span class="pull-right"><input type="checkbox" value="SUV" name="category"/></span></a> </li>
+									<li><a>Crossover  <span class="pull-right"><input type="checkbox" value="Crossover" name="category"/></span></a> </li>
+									<li><a>Coupe  <span class="pull-right"><input type="checkbox" value="Coupe" name="category"/></span></a> </li>
+									<li><a>Convertible  <span class="pull-right"><input type="checkbox" value="Convertible" name="category"/></span></a> </li></ul>
 							</div>
 						</div><!--/brands_products-->
 						
@@ -313,72 +335,42 @@ var today = mm+'/'+dd+'/'+yyyy;
 						<div class="line" style="font-size:20px"><span><b>Select Price</b></span></div>
 						<div class="brands-name" style="outline: 1px solid orange;" >
 							<ul class="nav nav-pills nav-stacked">
-									<li><a>$0 - $50  <span class="pull-right"><input type="checkbox" /></span></a> </li> 
-									<li><a>$51 - $150  <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>$151 - $300 <span class="pull-right"><input type="checkbox" /></span></a> </li>
-									<li><a>more than $300  <span class="pull-right"><input type="checkbox" /></span></a> </li>
+									<li><a>$0 - $50  <span class="pull-right"><input type="checkbox" value="0,50" name="pricerange"/></span></a> </li> 
+									<li><a>$51 - $150  <span class="pull-right"><input type="checkbox" value="51,150" name="pricerange"/></span></a> </li>
+									<li><a>$151 - $300 <span class="pull-right"><input type="checkbox" value="151,300" name="pricerange"/></span></a> </li>
+									<li><a>$300 - $1000 <span class="pull-right"><input type="checkbox" value="300,1000" name="pricerange"/></span></a> </li>
 						</div><!--/brands_products-->
 						</div>
 						
+
+						<%ArrayList<String> carlist = (ArrayList<String>) request.getAttribute("carlist");%>
 						
 						
 						
-						<div>
-						<input type="button" value="Search" class="btn btn-gold" style="color:black" /><br/><br/>
+						
+						<input type="submit" value="Search" class="btn btn-gold" style="color:black" /><br/><br/>
+						</form>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-9" >
-					
-						<div class="line" style="font-size:25px"><span><b>Featured Cars</b></span></div>
-						
-						<div class="col-sm-4" style="outline: 1px solid orange;">
-							<a href="#" style="text-decoration:none"><img src="images/audi1.jpg" style="padding:10px">
-							<p align="center" style="font-size:30px;color:black" ><b>$179</b>
-							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
-						</div>
-						<div class="col-sm-4" style="outline: 1px solid orange;">
-							<a href="#" style="text-decoration:none"><img src="images/bmw1.jpg" style="padding:10px">
-							<p align="center" style="font-size:30px;color:black" ><b>$159</b>
-							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
-						</div>
-						<div class="col-sm-4" style="outline: 1px solid orange;">
-							<a href="#" style="text-decoration:none"><img src="images/toyota1.jpg" style="padding:10px">
-							<p align="center" style="font-size:30px;color:black" ><b>$60</b>
-							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
-							</div><div class="col-sm-4" style="outline: 1px solid orange;">
-							<a href="#" style="text-decoration:none"><img src="images/ferrari1.jpg" style="padding:10px">
-							<p align="center" style="font-size:30px;color:black" ><b>$229</b>
-							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
-						</div>
-						<div class="col-sm-4" style="outline: 1px solid orange;">
-							<a href="#" style="text-decoration:none"><img src="images/vw.jpg" style="padding:10px">
-							<p align="center" style="font-size:30px;color:black" ><b>$70</b>
-							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
-							</div><div class="col-sm-4" style="outline: 1px solid orange;">
-							<a href="#" style="text-decoration:none"><img src="images/kia1.jpg" style="padding:10px">
-							<p align="center" style="font-size:30px;color:black" ><b>$89</b>
-							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
-						</div>
-				</div>
-				<div class="col-sm-9" style="padding:20px" >
-						<div class="line" style="font-size:20px"><span><b>You might like</b></span></div>
-						<div class="col-sm-4">
-							<a href="#" style="text-decoration:none"><img src="images/hyundai1.jpeg" style="padding:10px">
-							<p align="center" style="font-size:30px;color:black" ><b>$179</b>
-							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
-							</div>
-						<div class="col-sm-4">	
-							<a href="#" style="text-decoration:none"><img src="images/bmw3.jpg" style="padding:10px">
-							<p align="center" style="font-size:30px;color:black" ><b>$159</b>
-							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
-						</div>
-						<div class="col-sm-4">	
-							<a href="#" style="text-decoration:none"><img src="images/honda1.jpg" style="padding:10px">
-							<p align="center" style="font-size:30px;color:black" ><b>$110</b>
-							<input type="button" style="height:30px" class="btn btn-gold" value="Book Now"/></p></a>
-						</div>
-				</div>				
+				<div class="line" style="font-size:25px"><span><b>Featured Cars</b></span></div>
+				
+				<% 
+				int i =0;
+				%>
+				<%while (i<carlist.size()){%>
+				<div class="col-sm-4" style="outline: 1px solid orange;">
+				<a href="CarDetailServlet?carid=<%out.println(carlist.get(i));%>" style="text-decoration:none"><img src="data/images/<%out.println(carlist.get(i+8));%>" style="padding:10px" >
+				<div  style="float:left;margin-left:15px;padding-bottom:10px"><p style="font-weight:bold;font-family:Goudy Old Style;text-transform: uppercase;font-size:15px;color:black" ><font style="float:right"><%out.println(carlist.get(i+1));%></font></p>
+				<span class="stars-container stars-<%out.println(carlist.get(i+12));%>" style="font-size:15px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+				<div style="float:right;margin-right:15px"><p style="font-size:20px;color:black">
+							<b>$<%out.println(carlist.get(i+9));%></b><font style="font-family:Goudy Old Style;font-size:15px">/day</font></p></div>
+				</a>
+				</div>	
+				<%i=i+14;}%>	
+							
+			</div>
 			</div>
 			</div>
 <!--==============================footer=================================-->
@@ -401,7 +393,7 @@ var today = mm+'/'+dd+'/'+yyyy;
 				<div class="clear"></div>
 			</div>
 			</div>
-		</footer>
+</footer>
 		<script>
 			$(function (){
 				$('#bookingForm').bookingForm({
@@ -412,5 +404,5 @@ var today = mm+'/'+dd+'/'+yyyy;
 				$('#bookingForm input, #bookingForm textarea').placeholder();
 			});
 		</script>
-	</body>
+</body><%}%>
 </html>

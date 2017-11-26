@@ -4,7 +4,8 @@ public class BeanReviewAdd {
     protected String CarType;
     protected String CarName;
 	protected String Price;
-	protected String UserID;
+	protected String CarID;
+	protected String UserName;
 	protected String UserAge;
 	protected String UserGender;
     protected String ManufacturerName;
@@ -37,11 +38,18 @@ public class BeanReviewAdd {
 		this.Price = Price;
 	}
 
-    public String getUserID(){
-		return UserID;
+    public String getCarID(){
+		return CarID;
 	}
-	public void setUserID(String UserID){
-		this.UserID = UserID;
+	public void setCarID(String CarID){
+		this.CarID = CarID;
+	}
+
+	public String getUserName(){
+		return UserName;
+	}
+	public void setUserName(String UserName){
+		this.UserName = UserName;
 	}
 
 	public String getUserAge(){

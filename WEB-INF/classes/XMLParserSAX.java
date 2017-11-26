@@ -31,7 +31,7 @@ public class XMLParserSAX {
 		try{
         SAXParser saxParser = saxParserFactory.newSAXParser();
         MyHandler handler = new MyHandler();
-        saxParser.parse(new File("C:\\apache-tomcat-7.0.34\\webapps\\InfyMiles\\data\\CarsData.xml"), handler);
+        saxParser.parse(new File("C:\\apache-tomcat-7.0.34\\webapps\\InfyMiles_6\\data\\CarsData.xml"), handler);
         Map<String, Car> prodList = handler.getCarList();
 		i = prodList.toString();
         } catch (Exception e) {

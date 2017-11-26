@@ -19,18 +19,27 @@ desc register;
 Insert  into Register values('divyank08jain@gmail.com','Divyank','12345','customer','2951 S king drive','1234567890','chicago','IL','60606');
 select * from Register;
 
-create table Cars(carId int Primary key,
- carName varchar(20),
- carCategory varchar(20),
- carBrandName varchar(20),
- carMileage varchar(20),
- carModel varchar(20),
- carProductionYear varchar(20),
- carColor varchar(20),
- carImagePath varchar(200),
- carPrice varchar(20),
- carReservationStatus int
-);
+
+
+
+CREATE TABLE `cars` (
+  `carId` int(11) NOT NULL,
+  `carName` varchar(50) DEFAULT NULL,
+  `carCategory` varchar(20) DEFAULT NULL,
+  `carBrandName` varchar(20) DEFAULT NULL,
+  `carModel` varchar(20) DEFAULT NULL,
+  `carMileage` varchar(20) DEFAULT NULL,
+  `carProductionYear` varchar(20) DEFAULT NULL,
+  `carColor` varchar(20) DEFAULT NULL,
+  `carImagePath` varchar(200) DEFAULT NULL,
+  `carPrice` varchar(20) DEFAULT NULL,
+  `carReservationStatus` int(11) DEFAULT NULL,
+  `location` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`carId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
 
 create table Orders(
 orderId int  Primary key,

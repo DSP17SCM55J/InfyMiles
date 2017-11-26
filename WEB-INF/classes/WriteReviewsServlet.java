@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.RequestDispatcher;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoException;
@@ -35,7 +36,8 @@ public class WriteReviewsServlet extends HttpServlet {
         String carType = request.getParameter("cartype");
         String carName = request.getParameter("carName");
 		String carPrice = request.getParameter("price");
-		String userId = request.getParameter("userID");
+		String carId = request.getParameter("carID");
+        String userName = request.getParameter("userName");
 		String userAge = request.getParameter("userAge");
 		String userGender = request.getParameter("userGender");
 		String userOccupation = request.getParameter("userOccupation");
@@ -47,7 +49,8 @@ public class WriteReviewsServlet extends HttpServlet {
         reviewBean.setCarType(carType);
         reviewBean.setCarName(carName);
         reviewBean.setPrice(carPrice);
-        reviewBean.setUserID(userId);
+        reviewBean.setCarID(carId);
+        reviewBean.setUserName(userName);
         reviewBean.setUserAge(userAge);
         reviewBean.setUserGender(userGender);
         reviewBean.setUserOccupation(userOccupation);
@@ -57,6 +60,7 @@ public class WriteReviewsServlet extends HttpServlet {
         reviewBean.setReviewText(reviewText);
         
         PrintWriter out = response.getWriter();
+        HttpSession session = request.getSession();
 
         HashMap<String,BeanReviewAdd> hashObj = new HashMap<String,BeanReviewAdd>();
 
@@ -64,7 +68,33 @@ public class WriteReviewsServlet extends HttpServlet {
             hashObj.put(reviewBean.getCarName(), reviewBean);
             MongoDBDataStoreUtilities database = new MongoDBDataStoreUtilities();
             database.addReview(hashObj);
-            out.println("<h4> Review submitted for:"+ reviewBean.getCarName() + "</h4>");
+
+            HashMap<String,ArrayList<BeanReviewAdd>> hashObj1 = new HashMap<String, ArrayList<BeanReviewAdd>>();
+            hashObj1 = database.viewReview(reviewBean.getCarName());
+            //session.setAttribute("hashObj",hashObj);
+            System.out.println("hashobj1"+ hashObj1);
+            String name = "";
+            String date = "";
+            String text = "";
+			for(Map.Entry<String, ArrayList<BeanReviewAdd>> map : hashObj1.entrySet()){
+                for(BeanReviewAdd reviewview : map.getValue()){
+                    System.out.println("Name:"+ reviewview.getUserName());                           
+                    name = name + reviewview.getUserName() + ",";
+					date = date + reviewview.getReviewDate() + ",";
+					text = text + reviewview.getReviewText() + ",";
+                    
+                                           
+                }       
+            }
+
+            session.setAttribute("name",name);
+            session.setAttribute("date",date);
+            session.setAttribute("text",text);
+            // out.println("<h4> Review submitted for:"+ reviewBean.getCarName() + "</h4>");
+            System.out.println("review");
+            
+            response.sendRedirect("ViewCarDetail.jsp");
+
             }catch(Exception e){
                 e.printStackTrace();
         }

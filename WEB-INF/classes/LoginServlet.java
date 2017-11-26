@@ -13,25 +13,35 @@ public class LoginServlet extends HttpServlet{
     	String emailId = request.getParameter("emailId");
     	String password = request.getParameter("password");
     	String role = request.getParameter("role");
+		
 
-    	
+    	HttpSession session = request.getSession();
 
     	MySqlDataStoreUtilities msdsu = new MySqlDataStoreUtilities();
     	//list = msdsu.selectUser();
-    	boolean check = msdsu.checkUser(emailId,password,role);
+    	String name = msdsu.checkUser(emailId,password,role);
        
       PrintWriter out = response.getWriter();
      //String filePath = "../webapps/csj/Users/Pojo_user.txt";
 
-       if(check==true){
-        response.sendRedirect("home.jsp");
-        
+      if(name!=null){
+        if(role.equalsIgnoreCase("storemanager") && !(name.equalsIgnoreCase("error"))){
+          session.setAttribute("username",name); 
+          response.sendRedirect("StoreManager.jsp");
+        }
+		else if(role.equalsIgnoreCase("customer") && !(name.equalsIgnoreCase("error"))){
+          session.setAttribute("username",name); 
+          response.sendRedirect("home.jsp"); 
+        }
+		 else if (name.equalsIgnoreCase("error")){
+		   out.println("ErrorLogin");
+          response.sendRedirect("login.jsp?login=invalid");
        }
-       else{
-        out.println("U r not registered");
-       }
+      
+	  }
 
-       HttpSession session = request.getSession();      
+         
+		
        
        response.setContentType("text/html");
    }
