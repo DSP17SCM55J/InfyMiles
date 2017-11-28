@@ -399,7 +399,32 @@ public class MySqlDataStoreUtilities {
 
 	}
 	
-	
+	public ArrayList<String> graphGenration2(){
+		ArrayList<String> list = new ArrayList<String>();
+		try{
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/InfyMiles", "root", "root");
+            PreparedStatement ps = conn.prepareStatement("select carName, sum(amount) as finalAmount  from cars a,orders b where a.carid=b.carid group by carName;");
+            ResultSet rs = ps.executeQuery();
+            ResultSetMetaData rsmd = rs.getMetaData();
+           
+            while(rs.next()){
+                //String name = rs.getString(1);
+                //String quantity = rs.getString(2);
+                list.add(rs.getString(1));
+                list.add(rs.getString(2));
+            }
+           
+            return list;
+
+        }
+        catch(Exception e)
+        {
+
+            //out.println(e);
+        }
+        return list;
+    
+	}
 	
 	public ArrayList<String> graphGenration(){
         ArrayList<String> list = new ArrayList<String>();
@@ -427,6 +452,33 @@ public class MySqlDataStoreUtilities {
         return list;
     }
 
+
+public ArrayList<String> graphGenration3(){
+		ArrayList<String> list = new ArrayList<String>();
+		try{
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/InfyMiles", "root", "root");
+            PreparedStatement ps = conn.prepareStatement("select carName, count(b.carId) as counter from cars a, orders b where a.carId = b.carId group by carName;");
+            ResultSet rs = ps.executeQuery();
+            ResultSetMetaData rsmd = rs.getMetaData();
+           
+            while(rs.next()){
+                //String name = rs.getString(1);
+                //String quantity = rs.getString(2);
+                list.add(rs.getString(1));
+                list.add(rs.getString(2));
+            }
+           
+            return list;
+
+        }
+        catch(Exception e)
+        {
+
+            //out.println(e);
+        }
+        return list;
+    
+	}
 	public boolean bookcar(int carId, String userName, String orderDate, String startDate, String endDate, String amount, String cardNumber, String address, String status, String licenseId, String paymentMethod) {/*, String fName, String lName, String email, String cnumber,String usertype)*/ 
 		
 

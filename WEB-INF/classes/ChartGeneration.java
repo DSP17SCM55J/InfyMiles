@@ -33,10 +33,18 @@ public class ChartGeneration extends HttpServlet {
 		ArrayList<String> list = new ArrayList<String>();
 		list = msdsu.graphGenration();
 
+		ArrayList<String> list2 = new ArrayList<String>();
+		list2 = msdsu.graphGenration2();
+
+		ArrayList<String> list3 = new ArrayList<String>();
+		list3 = msdsu.graphGenration3();
+
 
 
 
 		request.setAttribute("graph",list);
+		request.setAttribute("graph2",list2);
+		request.setAttribute("graph3",list3);
 
 			RequestDispatcher rd=request.getRequestDispatcher("/test2.jsp");
 			rd.forward(request,response);
