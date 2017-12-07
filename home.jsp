@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <%@page import = "java.util.*"%>
+
 <%@page import = "java.io.*"%>
+
+
 <html lang="en">
 	<head>
 		<title>InfyMiles</title>
@@ -58,10 +61,15 @@
 <!--==============================header=================================-->
 <%
 if (request.getParameter("logout")!=null)
+<<<<<<< HEAD
 		session.removeAttribute("username");
 if (session.getAttribute("dealmatch")==null )
 		response.sendRedirect("DealMatches");
 else if (request.getParameter("check")==null)
+=======
+		session.invalidate();
+if (request.getParameter("check")==null)
+>>>>>>> adb2f60ce35d08f15691c82161f3987a433edb1a
 response.sendRedirect("LoadData");
 else if (request.getAttribute("carlist")==null)
 response.sendRedirect("ShowHomeCars");

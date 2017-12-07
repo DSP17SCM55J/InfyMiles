@@ -11,7 +11,9 @@
                             <td>  
 
         <p><label for='productId'> Cars ID: </label>
+
        <td> <input name='prodId' id='prodId' value='' type='text'/></p></td>
+
 
             </td>
 </tr>

@@ -45,8 +45,7 @@ public class ChartGeneration extends HttpServlet {
 		request.setAttribute("graph",list);
 		request.setAttribute("graph2",list2);
 		request.setAttribute("graph3",list3);
-
-			RequestDispatcher rd=request.getRequestDispatcher("ChartGenerate.jsp");
-			rd.forward(request,response);
+		RequestDispatcher rd=request.getRequestDispatcher("ChartGenerate.jsp");
+		rd.forward(request,response);
 	}
 }

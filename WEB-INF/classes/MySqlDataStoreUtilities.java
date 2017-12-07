@@ -399,8 +399,11 @@ public class MySqlDataStoreUtilities {
 
 	}
 	
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> adb2f60ce35d08f15691c82161f3987a433edb1a
 	public ArrayList<String> graphGenration2(){
 		ArrayList<String> list = new ArrayList<String>();
 		try{
@@ -481,8 +484,6 @@ public ArrayList<String> graphGenration3(){
         return list;
     
 	}
-	
-	
 
 	public boolean bookcar(int carId, String userName, String orderDate, String startDate, String endDate, String amount, String cardNumber, String address, String status, String licenseId, String paymentMethod) {/*, String fName, String lName, String email, String cnumber,String usertype)*/ 
 		

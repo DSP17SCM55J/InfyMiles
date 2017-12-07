@@ -30,8 +30,10 @@ ArrayList<String> reviewlist = (ArrayList<String>) session.getAttribute("reviewl
 		 
 		 
  <input type="text" id="date" name="date" style="font-size:20px;width:500px;height:50px"/>
+
  <input type="hidden" id="startdate" value="<%if (request.getAttribute("startdate")!=null) out.println(request.getAttribute("startdate")); else out.println("12/1/2017 12:00 AM");%>" />
 <input type="hidden" id="enddate" value="<%if (request.getAttribute("enddate")!=null) out.println(request.getAttribute("enddate"));  else out.println("12/31/2017 12:00 AM");%>" />
+
 <script type="text/javascript">
 
 

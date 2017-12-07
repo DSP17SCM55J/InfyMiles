@@ -17,12 +17,13 @@ public void processReq(HttpServletRequest request, HttpServletResponse response)
 	Map<Integer,String> map = new HashMap<Integer,String>();
 	MySqlDataStoreUtilities mysql = new MySqlDataStoreUtilities();
 	map = mysql.SelectProducts();
+
 	HttpSession session = request.getSession();
 	session.setAttribute("dealmatch",map);
 	out.println(map);
 	response.sendRedirect("home.jsp");
 		
-	//return key;
+
 }
 
  protected void doGet(HttpServletRequest request, HttpServletResponse response)

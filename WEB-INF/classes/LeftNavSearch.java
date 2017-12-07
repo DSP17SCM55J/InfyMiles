@@ -22,6 +22,7 @@ public class LeftNavSearch extends HttpServlet {
 		String first="";
 		String last="";
         java.io.PrintWriter out = response.getWriter();
+
 		request.setAttribute("startdate","12/1/2017 12:00 AM");
 		request.setAttribute("enddate","12/31/2017 12:00 AM");
 		if (request.getParameter("location")!=null){

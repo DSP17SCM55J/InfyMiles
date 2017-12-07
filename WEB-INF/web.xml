@@ -313,7 +313,6 @@
         <servlet-name>DealMatches</servlet-name>
         <url-pattern>/DealMatches</url-pattern>
     </servlet-mapping>	
-	
 
 	
 </web-app>
