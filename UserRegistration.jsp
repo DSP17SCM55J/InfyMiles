@@ -6,6 +6,14 @@
 					<table><b>
 						<br/><br/>
 						<tr>
+							
+							<td><select id='role' name='role'>
+								<option value='customer'>Customer</option>
+								<option value='storeManager'>Store Manager</option>
+							
+							</select></td>
+						</tr>
+						<tr>
 							<td>
 								<input class="login" type="text"required name="name" onkeypress="return onlyAlphabets()" placeholder="Name" maxlength="30"/> 
 							</td>
@@ -50,17 +58,7 @@
 								<input class="login" type="text"required onkeypress="return onlyNumbers()" name="zipcode" placeholder="Zipcode" maxlength="5"/> 
 							</td>
 						</tr>
-						
-						<tr>
-							<td>Role</td>
-							<td><select id='role' name='role'>
-								<option value='customer'>Customer</option>
-								<option value='storeManager'>Store Manager</option>
-							
-							</select></td>
-						</tr>
-
-						
+										
 						<tr>
 							<td><input type="submit" style="padding:10px" value="SignUp" class="btn btn-gold">
 								

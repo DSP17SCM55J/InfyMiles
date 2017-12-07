@@ -39,7 +39,7 @@ public class LoadData extends HttpServlet {
 		s = s.substring(0, s.length() - 1);
 		s = s.replaceAll(",", "','");
 		s= "'" + s + "'";
-		mysql.InsertUser(s);
+		mysql.insertCarData(s);
 		out.print(s + "<br/>");
 		nw=nw+1;
 		}

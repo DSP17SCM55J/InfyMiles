@@ -11,6 +11,7 @@
 <carImagePath>fordvan.jpg</carImagePath>
 <carPrice>35</carPrice>
 <carReservationStatus>0</carReservationStatus>
+<location>Chicago</location>
 </Car>
 
 <Car id="2">
@@ -24,7 +25,7 @@
 <carImagePath>fordfiesta.jpg</carImagePath>
 <carPrice>29</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="3">
 <carName>Jaguar X6J</carName>
@@ -37,7 +38,7 @@
 <carImagePath>jaguarxj6.jpg</carImagePath>
 <carPrice>80</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="4">
 <carName>Jaguar XK 5.0</carName>
@@ -50,7 +51,7 @@
 <carImagePath>JaguarXK.jpg</carImagePath>
 <carPrice>160</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="5">
 <carName>Audi A5</carName>
@@ -63,7 +64,7 @@
 <carImagePath>audia5.jpg</carImagePath>
 <carPrice>190</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="6">
 <carName>Audi A1</carName>
@@ -76,7 +77,7 @@
 <carImagePath>audia1.jpg</carImagePath>
 <carPrice>140</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="7">
 <carName>Audi A3</carName>
@@ -89,7 +90,7 @@
 <carImagePath>audia3.jpg</carImagePath>
 <carPrice>160</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="8">
 <carName>BMW X1</carName>
@@ -102,7 +103,7 @@
 <carImagePath>bmwx1.jpg</carImagePath>
 <carPrice>135</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="9">
 <carName>BMW 320I</carName>
@@ -115,7 +116,7 @@
 <carImagePath>bmw320i.jpg</carImagePath>
 <carPrice>90</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="10">
 <carName>BMW X6</carName>
@@ -128,7 +129,7 @@
 <carImagePath>bmwx6.jpg</carImagePath>
 <carPrice>88</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="11">
 <carName>Mercedes Benz GLC</carName>
@@ -141,7 +142,7 @@
 <carImagePath>mercedesglc.jpg</carImagePath>
 <carPrice>70</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="12">
 <carName>Mercedes Strich 8</carName>
@@ -154,7 +155,7 @@
 <carImagePath>mercedesstrich8.jpg</carImagePath>
 <carPrice>225</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="13">
 <carName>Mercedes Benz GLE</carName>
@@ -167,7 +168,7 @@
 <carImagePath>mercedesbenzgle.jpg</carImagePath>
 <carPrice>200</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="14">
 <carName>VolksWagen Passat CC</carName>
@@ -180,7 +181,7 @@
 <carImagePath>volkswagen-passat-cc.jpg</carImagePath>
 <carPrice>60</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="15">
 <carName>VolksWagen Taigun</carName>
@@ -193,7 +194,7 @@
 <carImagePath>volkswagen-taigun.jpg</carImagePath>
 <carPrice>110</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="16">
 <carName>VW Beetle</carName>
@@ -206,7 +207,7 @@
 <carImagePath>vwbeetle.jpg</carImagePath>
 <carPrice>45</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="17">
 <carName>Ferrari 488 GTB</carName>
@@ -219,7 +220,7 @@
 <carImagePath>ferrari-488-gtb.jpg</carImagePath>
 <carPrice>250</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="18">
 <carName>Ferrari California</carName>
@@ -232,7 +233,7 @@
 <carImagePath>Ferrari-California.jpg</carImagePath>
 <carPrice>225</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="19">
 <carName>Ferrari Enzo</carName>
@@ -245,7 +246,7 @@
 <carImagePath>ferrarienzo.jpg</carImagePath>
 <carPrice>230</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="20">
 <carName>Toyota Tacoma</carName>
@@ -258,7 +259,7 @@
 <carImagePath>toyota_tacoma.jpg</carImagePath>
 <carPrice>35</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="21">
 <carName>Toyota Camry</carName>
@@ -271,7 +272,7 @@
 <carImagePath>toyotacamry.jpg</carImagePath>
 <carPrice>28</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="22">
 <carName>Toyota Corolla</carName>
@@ -284,7 +285,7 @@
 <carImagePath>2014-Toyota-Corolla.jpg</carImagePath>
 <carPrice>45</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="23">
 <carName>Honda Accord</carName>
@@ -297,7 +298,7 @@
 <carImagePath>honda_accord.jpg</carImagePath>
 <carPrice>40</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="24">
 <carName>Honda Civic</carName>
@@ -310,7 +311,7 @@
 <carImagePath>honda-civic.jpg</carImagePath>
 <carPrice>60</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="25">
 <carName>Honda CR-V</carName>
@@ -323,7 +324,7 @@
 <carImagePath>hondacrv.jpg</carImagePath>
 <carPrice>35</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="26">
 <carName>Chevrolet Tahoe</carName>
@@ -336,7 +337,7 @@
 <carImagePath>black-chevrolet-tahoe.jpg</carImagePath>
 <carPrice>55</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="27">
 <carName>Chevrolet Spark</carName>
@@ -349,7 +350,7 @@
 <carImagePath>chevroletspark.jpg</carImagePath>
 <carPrice>25</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="28">
 <carName>Chevrolet Camaro</carName>
@@ -362,7 +363,7 @@
 <carImagePath>chevrolet_camaro.jpg</carImagePath>
 <carPrice>50</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="29">
 <carName>Mazda CX-4</carName>
@@ -375,7 +376,7 @@
 <carImagePath>mazdacx4.jpg</carImagePath>
 <carPrice>65</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="30">
 <carName>Mazda 3</carName>
@@ -388,7 +389,7 @@
 <carImagePath>mazda3.jpg</carImagePath>
 <carPrice>32</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="31">
 <carName>Mazda Auto 1.5</carName>
@@ -401,7 +402,7 @@
 <carImagePath>mazda_3_sedan_auto.jpg</carImagePath>
 <carPrice>45</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>Chicago</location></Car>
 
 <Car id="32">
 <carName>KIA Optima</carName>
@@ -414,7 +415,7 @@
 <carImagePath>kiaoptima.jpg</carImagePath>
 <carPrice>60</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 <Car id="33">
 <carName>KIA SXL</carName>
@@ -427,7 +428,7 @@
 <carImagePath>Kiasxl.jpg</carImagePath>
 <carPrice>42</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 <Car id="34">
 <carName>KIA Sorento LX4</carName>
@@ -440,7 +441,7 @@
 <carImagePath>kiasorentolx4.jpg</carImagePath>
 <carPrice>55</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 <Car id="35">
 <carName>Range Rover Sports</carName>
@@ -453,7 +454,7 @@
 <carImagePath>range-rover-sport.jpg</carImagePath>
 <carPrice>130</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 <Car id="36">
 <carName>Range Rover Evoque</carName>
@@ -466,7 +467,7 @@
 <carImagePath>range_rover_evoque.jpg</carImagePath>
 <carPrice>180</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 <Car id="37">
 <carName>Range Rover Sport SVR</carName>
@@ -479,7 +480,7 @@
 <carImagePath>range-rover-sport-svr.jpg</carImagePath>
 <carPrice>160</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 <Car id="38">
 <carName>Rolls Royce Phantom 2017</carName>
@@ -492,7 +493,7 @@
 <carImagePath>rollsroyceuk.jpg</carImagePath>
 <carPrice>450</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 <Car id="39">
 <carName>Rolls Royce Phantom</carName>
@@ -505,7 +506,7 @@
 <carImagePath>rolls-royce-phantom.jpg</carImagePath>
 <carPrice>555</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 <Car id="40">
 <carName>Rolls Royce Retro</carName>
@@ -518,7 +519,7 @@
 <carImagePath>rolls-royce-retro.jpg</carImagePath>
 <carPrice>600</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 <Car id="41">
 <carName>Bugatti Chiron</carName>
@@ -531,7 +532,7 @@
 <carImagePath>bugatti-chiron.jpg</carImagePath>
 <carPrice>350</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 <Car id="42">
 <carName>Bugatti Veyron</carName>
@@ -544,7 +545,7 @@
 <carImagePath>bugattiveyron.jpg</carImagePath>
 <carPrice>400</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 <Car id="43">
 <carName>Lamborghini Gallardo</carName>
@@ -557,7 +558,7 @@
 <carImagePath>lamborghinigallardo.jpg</carImagePath>
 <carPrice>375</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 
 <Car id="44">
@@ -571,7 +572,7 @@
 <carImagePath>lamborghini-urus.jpg</carImagePath>
 <carPrice>400</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 
 <Car id="45">
@@ -585,7 +586,7 @@
 <carImagePath>fordedge.jpg</carImagePath>
 <carPrice>75</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 
 <Car id="46">
@@ -599,7 +600,7 @@
 <carImagePath>fordescape.jpg</carImagePath>
 <carPrice>80</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 
 <Car id="47">
@@ -613,7 +614,7 @@
 <carImagePath>jaguar-xs.jpg</carImagePath>
 <carPrice>120</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 
 <Car id="48">
@@ -627,7 +628,7 @@
 <carImagePath>jaguarsv8.jpg</carImagePath>
 <carPrice>230</carPrice>
 <carReservationStatus>0</carReservationStatus>
-</Car>
+<location>New York</location></Car>
 
 
 
